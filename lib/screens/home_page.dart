@@ -29,7 +29,7 @@ class _appmaniaState extends State<appmania> {
               width: 5,
             ),
             Text(
-              'Mota varachha',
+              'Surat City',
               style: TextStyle(
                 color: Colors.black,
               ),
@@ -39,19 +39,10 @@ class _appmaniaState extends State<appmania> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushNamed('cart');
-            },
-            icon: const Icon(
-              Icons.shopping_cart,
-              color: Colors.black,
-            ),
-          ),
-          IconButton(
-            onPressed: () {
               Navigator.of(context).pushNamed('fav');
             },
             icon: const Icon(
-              Icons.favorite_outlined,
+              Icons.favorite_outline_rounded,
               color: Colors.black,
             ),
           ),
@@ -74,7 +65,7 @@ class _appmaniaState extends State<appmania> {
               const Row(
                 children: [
                   Text(
-                    "Find The",
+                    "Find Tha",
                     style: TextStyle(fontSize: 30),
                   ),
                   Text(
@@ -238,33 +229,30 @@ class _appmaniaState extends State<appmania> {
                                                       right: 10,
                                                     ),
                                                     child: IconButton(
-                                                      alignment:
-                                                          Alignment.bottomRight,
                                                       onPressed: () {
-                                                        setState(
-                                                          () {
-                                                            e['favfoods'] ==
-                                                                !e['favfoods'];
-                                                            if (e['favfoods'] ==
-                                                                true) {
-                                                              Global.addFav
-                                                                  .add(e);
-                                                            } else if (e[
-                                                                    'favfoods'] ==
-                                                                false) {
-                                                              Global.favData
-                                                                  .remove(e);
-                                                            }
-                                                          },
-                                                        );
+                                                        setState(() {
+                                                          e['faveProduct'] =
+                                                              !e['faveProduct'];
+                                                        });
+                                                        (e['faveProduct'] ==
+                                                                true)
+                                                            ? cartfoods.add(e)
+                                                            : cartfoods
+                                                                .remove(e);
                                                       },
-                                                      icon: (e['fav'] == false)
+                                                      icon: (e['faveProduct'] ==
+                                                              false)
                                                           ? const Icon(
-                                                              Icons.favorite,
+                                                              Icons
+                                                                  .favorite_outline_rounded,
+                                                              color: Colors
+                                                                  .blueAccent,
                                                             )
                                                           : const Icon(
                                                               Icons
-                                                                  .favorite_border_rounded,
+                                                                  .favorite_outlined,
+                                                              color: Colors
+                                                                  .blueAccent,
                                                             ),
                                                     ),
                                                   ),
@@ -287,7 +275,7 @@ class _appmaniaState extends State<appmania> {
                                                       ),
                                                       color: Colors.blueAccent,
                                                     ),
-                                                    child: Icon(
+                                                    child: const Icon(
                                                       Icons.add,
                                                       color: Color(0xFFF4F4F4),
                                                     ),
@@ -374,7 +362,7 @@ class _appmaniaState extends State<appmania> {
                                                                           10,
                                                                     ),
                                                                     Text(
-                                                                      "₹ ${e['price']}",
+                                                                      "PR.${e['price']}",
                                                                       style:
                                                                           const TextStyle(
                                                                         fontSize:

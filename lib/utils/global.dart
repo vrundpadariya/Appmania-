@@ -7,6 +7,8 @@ class Global {
           'id': 1,
           'name': 'Aloo Tikki',
           'price': 70,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.5,
           'calories': 340,
           'time': '10 min',
@@ -19,6 +21,8 @@ class Global {
           'id': 2,
           'name': 'Corn & Cheese Burger',
           'price': 145,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.0,
           'calories': 486,
           'time': '15 min',
@@ -31,6 +35,8 @@ class Global {
           'id': 3,
           'name': 'Veggie Burger',
           'price': 157,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.9,
           'calories': 402,
           'time': '20 min',
@@ -44,6 +50,8 @@ class Global {
           'name': 'Spicy Paneer Burger',
           'price': 200,
           'ratting': 4.5,
+          'faveProduct': false,
+          'added': false,
           'calories': 653,
           'time': '15 min',
           'thumbnail':
@@ -55,6 +63,8 @@ class Global {
           'id': 5,
           'name': 'Cheese Burger Veg',
           'price': 262,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.5,
           'calories': 452,
           'time': '20 min',
@@ -67,6 +77,8 @@ class Global {
           'id': 6,
           'name': 'Mexican Aloo Tikki',
           'price': 74,
+          'faveProduct': false,
+          'added': false,
           'ratting': 3.9,
           'calories': 452,
           'time': '20 min',
@@ -79,6 +91,8 @@ class Global {
           'id': 7,
           'name': 'Spicy Premium Veg ',
           'price': 249,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.2,
           'calories': 568,
           'time': '15 min',
@@ -92,6 +106,8 @@ class Global {
           'name': 'Veg Maharaja',
           'price': 220,
           'ratting': 5,
+          'faveProduct': false,
+          'added': false,
           'calories': 793,
           'time': '25 min',
           'thumbnail':
@@ -108,6 +124,8 @@ class Global {
           'id': 1,
           'name': 'Cheese Burger Chicken',
           'price': 281,
+          'faveProduct': false,
+          'added': false,
           'ratting': 3.5,
           'calories': 310,
           'time': '10 min',
@@ -122,6 +140,8 @@ class Global {
           'price': 138,
           'ratting': 4.9,
           'calories': 402,
+          'faveProduct': false,
+          'added': false,
           'time': '15 min',
           'thumbnail':
               "https://d37byfojjwz7vp.cloudfront.net/new_resize_350_16866548681525.jpeg",
@@ -132,6 +152,8 @@ class Global {
           'id': 3,
           'name': 'Grilled Chicken & Cheese',
           'price': 164,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.9,
           'calories': 420,
           'time': '20 min',
@@ -142,6 +164,8 @@ class Global {
         },
         {
           'id': 4,
+          'faveProduct': false,
+          'added': false,
           'name': 'Chicken Kebab',
           'price': 111,
           'ratting': 4.5,
@@ -156,6 +180,8 @@ class Global {
           'id': 5,
           'name': 'Spicy Chicken ',
           'price': 190,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.5,
           'calories': 452,
           'time': '15 min',
@@ -167,6 +193,8 @@ class Global {
         {
           'id': 6,
           'name': 'Masala McEgg ',
+          'faveProduct': false,
+          'added': false,
           'price': 69,
           'ratting': 3.9,
           'calories': 290,
@@ -182,6 +210,8 @@ class Global {
           'price': 185,
           'ratting': 4.2,
           'calories': 348,
+          'faveProduct': false,
+          'added': false,
           'time': '15 min',
           'thumbnail':
               "https://d37byfojjwz7vp.cloudfront.net/new_resize_228_1686654991585567.jpeg",
@@ -200,6 +230,8 @@ class Global {
           'ratting': 3.5,
           'calories': 151,
           'time': '5 min',
+          'faveProduct': false,
+          'added': false,
           'thumbnail':
               "https://d37byfojjwz7vp.cloudfront.net/new_resize_350_MCOKE-16-1-16.png",
           'discription':
@@ -209,6 +241,8 @@ class Global {
           'id': 2,
           'name': 'Coke zero can',
           'price': 67,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.9,
           'calories': 0.99,
           'time': '2-3 min',
@@ -223,6 +257,8 @@ class Global {
           'price': 103,
           'ratting': 4.9,
           'calories': 179,
+          'faveProduct': false,
+          'added': false,
           'time': '5 min',
           'thumbnail':
               "https://d37byfojjwz7vp.cloudfront.net/new_resize_350_MORG-21-1-21.png",
@@ -233,6 +269,8 @@ class Global {
           'name': 'Sprite',
           'price': 103,
           'ratting': 4.5,
+          'faveProduct': false,
+          'added': false,
           'calories': 165,
           'time': '5 min',
           'thumbnail':
@@ -244,6 +282,8 @@ class Global {
           'id': 5,
           'name': 'Chilli Guava Sprite',
           'price': 103,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.5,
           'calories': 102,
           'time': '5 min',
@@ -261,6 +301,8 @@ class Global {
           'id': 1,
           'name': 'Flurry Oreo',
           'price': 129,
+          'faveProduct': false,
+          'added': false,
           'ratting': 3.5,
           'calories': 103,
           'time': '5 min',
@@ -273,6 +315,8 @@ class Global {
           'id': 2,
           'name': 'Soft Serve Hot Fudge',
           'price': 65,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.9,
           'calories': 197,
           'time': '10 min',
@@ -285,6 +329,8 @@ class Global {
           'id': 3,
           'name': 'Brownie Hot Fudge',
           'price': 138,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.9,
           'calories': 311,
           'time': '15 min',
@@ -297,6 +343,8 @@ class Global {
           'id': 4,
           'name': ' Serve Strawberry',
           'price': 65,
+          'faveProduct': false,
+          'added': false,
           'ratting': 4.5,
           'calories': 156,
           'time': '5 min',
@@ -311,6 +359,8 @@ class Global {
           'price': 115,
           'ratting': 4.5,
           'calories': 430,
+          'faveProduct': false,
+          'added': false,
           'time': '5 min',
           'thumbnail':
               "https://d37byfojjwz7vp.cloudfront.net/new_resize_350_RBLKFR-2803-1-2803.png",
@@ -333,7 +383,26 @@ buyfoodsPrice() {
   return sum;
 }
 
+int delivery = 100;
+int cartprice = 0;
+int subTotal = 0;
+int gettotal = 0;
+
+updateCartPrice() {
+  cartprice = 0;
+  cartfoods.forEach((e) {
+    cartprice += int.parse(e['cartprice'] * e['quantity']);
+  });
+}
+
 lengthCart() {
   num cartLength = cartfoods.length;
   return cartLength;
+}
+
+updateSubtotal() {
+  subTotal = 0;
+  cartfoods.forEach((e) {
+    subTotal += int.parse(e['price'] + delivery);
+  });
 }

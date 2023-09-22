@@ -5,146 +5,158 @@ class favourite extends StatefulWidget {
   const favourite({super.key});
 
   @override
-  State<favourite> createState() => _favouritePageState();
+  State<favourite> createState() => _cartPageState();
 }
 
-class _favouritePageState extends State<favourite> {
+class _cartPageState extends State<favourite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          splashRadius: 20,
-          icon: const Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueAccent,
         elevation: 0,
-        centerTitle: true,
-        title: const Text(
-          "favourite",
+        title: Text(
+          "Favorite's",
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
+            fontSize: 22,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+            ),
+          ),
+        ],
       ),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 12,
-            child: Container(
-              padding: const EdgeInsets.all(10),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: cartfoods.map((e) {
-                    return Container(
-                      height: MediaQuery.of(context).size.height / 5,
-                      child: Card(
-                        elevation: 5,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: NetworkImage("${e['thumbnail']}"),
-                                    fit: BoxFit.fill,
-                                  ),
+      backgroundColor: Colors.blueAccent,
+      body: Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          padding: EdgeInsets.only(
+            top: 40,
+            left: 10,
+            right: 10,
+          ),
+          height: MediaQuery.of(context).size.height / 1.2,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: Color(0xFFF4F4F4),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(40),
+              topLeft: Radius.circular(40),
+            ),
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: cartfoods.map((e) {
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      Navigator.of(context).pushNamed('cart_page');
+                    });
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    height: MediaQuery.of(context).size.height / 7,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(40),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: CircleAvatar(
+                            radius: 80,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage("${e['thumbnail']}"),
                                 ),
                               ),
-                              flex: 3,
                             ),
-                            Expanded(
-                              child: Container(
-                                padding: EdgeInsets.all(10),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            padding: EdgeInsets.only(
+                              top: 10,
+                              left: 10,
+                              right: 20,
+                              bottom: 10,
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Expanded(
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
                                           "${e['name']}",
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w500,
+                                          style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w700,
                                           ),
                                         ),
                                         SizedBox(
-                                          height: 12,
+                                          width: 10,
                                         ),
                                         Text(
-                                          "Rs.${e['price']}",
+                                          "⭐️ ${e['ratting']}",
                                           style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.w500,
+                                            fontSize: 14,
                                           ),
-                                        )
+                                        ),
                                       ],
                                     ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          cartfoods.remove(e);
-                                        });
-                                      },
-                                      child: Text(
-                                        "DELETE",
-                                        style: const TextStyle(
-                                          fontSize: 18,
-                                          decoration: TextDecoration.underline,
-                                          color: Colors.blueAccent,
-                                        ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "₹ ${e['price']}",
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
                                   ],
                                 ),
-                              ),
-                              flex: 5,
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.black87,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Your favourite list",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
+                      ],
                     ),
                   ),
-                ],
-              ),
+                );
+              }).toList(),
             ),
           ),
-        ],
+        ),
       ),
     );
   }

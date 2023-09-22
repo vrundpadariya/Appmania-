@@ -151,7 +151,7 @@ class _DetailPageState extends State<Details> {
                         child: Text(
                           "⭐️ ${data['ratting']}",
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -159,9 +159,9 @@ class _DetailPageState extends State<Details> {
                       Container(
                         width: 70,
                         child: Text(
-                          " 🔥 ${data['calories']}",
+                          "🔥${data['calories']}",
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -171,7 +171,7 @@ class _DetailPageState extends State<Details> {
                         child: Text(
                           "⏰ ${data['time']}",
                           style: const TextStyle(
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -189,7 +189,7 @@ class _DetailPageState extends State<Details> {
               width: 250,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
-                  Radius.circular(15),
+                  Radius.circular(20),
                 ),
                 color: Colors.blueAccent,
               ),
